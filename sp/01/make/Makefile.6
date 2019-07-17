@@ -1,0 +1,13 @@
+CC = gcc -Wall -g
+TARGET = aaa
+OBJS = main.o add.o
+CFLAGS = -c
+
+$(TARGET) : $(OBJS)
+	$(CC) $(OBJS) -o $(TARGET)
+
+%.o : %.c
+	$(CC) $(CFLAGS) $< -I.
+
+clean:
+	rm $(OBJS) $(TARGET)
