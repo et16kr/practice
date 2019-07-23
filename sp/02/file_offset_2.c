@@ -11,7 +11,6 @@ int main()
 	fd2 = open("aaa", O_RDONLY );
 
 	ret = read(fd1,buff,2);
-	
 	write( 1, buff, ret );
 
 	ret = read(fd2,buff,2);
